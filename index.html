@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indicators</title>
+    
+</head>
+<body>
+    <div id="carousel">
+        <div id="indicators">
+        </div>
+     
+    </div>
+    <script>
+let activN=2
+const renderIndicators = () =>{
+let html=`<button><img src="previous-icon.png"/></button>`
+let n=0
+let activN=1
+let color="black"
+// for(let n=3;n>=1;n--){
+// html+= `<img src="${n}.jpg"/>`
+// indicators.innerHTML=html
+
+// }
+while(n<=2){
+    // if(n==activN){
+    //     color="orange"}
+    n==activN?color="orange":color="black"
+    n++
+    html+= `<img  src="${n}.jpg" 
+            style="border: 3px solid ${color};
+                   margin:5px"/>`
+
+}
+html+=`<button onclick="nextSlide()"><img src="next-icon.png"/></button>`
+indicators.innerHTML=html
+        }
+        const nextSlide=()=>{
+        activN++
+        debugger
+
+
+        }
+        renderIndicators()
+    </script>
+</body>
+</html>
